@@ -1,0 +1,2 @@
+export const SAVE_LAUNCHES = 'SAVE_LAUNCHES'
+export const GET_LAUNCHES = 'GET_LAUNCHES'
