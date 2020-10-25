@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './styles/stylesheet.scss'
-import LaunchesForm from './view/launches/launches-form';
+import Launches from './view/launches/launches';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LaunchesForm />
+    <Launches />
   </React.StrictMode>,
   document.getElementById('root')
 );

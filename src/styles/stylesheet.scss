@@ -1,78 +1,179 @@
-$font-color: #545454;
+$white-font: #fff;
+$wrapper-font: rgb(84, 84, 84);
 $primary: #215184;
-$family-primary: 'Brandon Grotesque';
-$font-family: 'Brandon Grotesque';
-@import '~bulma/bulma.sass';
+$family-primary: "Brandon Grotesque";
+$font-family: "Brandon Grotesque";
+@import "~bulma/bulma.sass";
 
 body {
-   font-family: Brandon Grotesque;
+  font-family: $font-family;
 }
 
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-Bold.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-Bold.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-Bold.ttf') format('truetype');
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Bold.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Bold.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-Regular.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-Regular.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-Regular.ttf') format('truetype');
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Regular.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Regular.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-RegularItalic.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-RegularItalic.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-RegularItalic.ttf') format('truetype');
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-RegularItalic.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-RegularItalic.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-RegularItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-Black.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-Black.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-Black.ttf') format('truetype');
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Black.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-Medium.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-Medium.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-Medium.ttf') format('truetype');
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Medium.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Medium.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-.app-container{
-  padding: 40px;
-}
+.launches-container {
+  margin: 40px 0 40px 40px;
+  .loader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
 
-.img-wrapper {
-  margin-top: 0.3em;
-}
+    .loader {
+      height: 80px;
+      width: 80px;
+    }
 
-.refresh {
-  background: url("../assets/icon/refresh.png") no-repeat;
-  height: 20px;
-  width: 20px;
-}
+    &.is-active {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
 
-.btn-refresh {
-  border-radius: 21.5px 0 0 21.5px;
-}
+  .level {
+    margin-bottom: 60px;
+  }
 
-.sort {
-  background: url("../assets/icon/sort.png") no-repeat;
-  height: 20px;
-  width: 20px;
+  .img-wrapper {
+    margin-top: 5px;
+  }
+  .launches-table {
+    padding: 0px 80px 0px 40px;
+  }
+  .launches-action-group {
+    margin-bottom: 13px;
+    .select,
+    .button {
+      font-weight: 700;
+    }
+  }
+  .btn-refresh {
+    border-radius: 21.5px 0 0 21.5px;
+    font-weight: 700;
+    .refresh-icon {
+      background: url("../assets/icon/refresh.png") no-repeat;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .btn-sort {
+    border-radius: 0;
+    .sort-icon {
+      background: url("../assets/icon/sort.png") no-repeat;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .btn-controls {
+    padding: 0px 80px 0px 40px;
+    .column {
+      padding: 0;
+    }
+  }
+
+  .select {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 180px;
+    background-color: $primary;
+    color: $white-font;
+    border-radius: 0;
+    background-image: url("../assets/icon/select.png");
+    background-repeat: no-repeat;
+    background-position: 156px center;
+    padding: 0 16px;
+    margin-right: 20px;
+  }
+
+  .select::-ms-expand {
+    display: none;
+  }
+
+  .launch-details {
+    align-items: center;
+    justify-content: center;
+    border: solid 1pt rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 0 0 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    color: $wrapper-font;
+    word-break: break-word;
+    .launch-index {
+      font-weight: 500;
+      font-size: 40px;
+      padding-left: 25px;
+    }
+
+    .launch-mission-name {
+      font-weight: 500;
+      font-size: 32px;
+    }
+
+    .launch-year {
+      padding-right: 25px;
+      .launch-date {
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .launch-rocket-name {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+  }
 }
