@@ -25,3 +25,9 @@ Considerations we will be looking for in your submission are:
 - Network logic
 
 Please complete the task using a Git source control tool such as GitHub or Bitbucket. Remember to commit your code regularly. And as your submission, please provide access and the URL to the repository.
+
+Output:
+
+![alt tag](https://user-images.githubusercontent.com/33273816/97113204-aca65780-16e0-11eb-9378-d7c0b485e8af.png)
+![alt tag](https://user-images.githubusercontent.com/33273816/97113207-b039de80-16e0-11eb-817a-5bc9ff3df459.png)
+![alt tag](https://user-images.githubusercontent.com/33273816/97113208-b0d27500-16e0-11eb-90ec-07d6e311626c.png)
